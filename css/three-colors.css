@@ -1,0 +1,475 @@
+/* Força as 3 cores em header, footer, fundos e botões */
+
+html,
+body,
+.app-shell {
+  background: #fff3e0 !important;
+  color: #e85d2a !important;
+}
+
+.block-night,
+.block-moon,
+.footer,
+.nav__drawer,
+.cart-drawer__panel {
+  background: #fff3e0 !important;
+  color: #e85d2a !important;
+}
+
+.block-moon {
+  background: linear-gradient(180deg, #fff3e0 0%, #ffb04a 100%) !important;
+}
+
+.block-night {
+  background: linear-gradient(180deg, #ffb04a 0%, #fff3e0 100%) !important;
+}
+
+.footer.block-night {
+  background: linear-gradient(180deg, #fff3e0 0%, #ffb04a 100%) !important;
+  /* cobre o espaço da tabbar — evita faixa clara abaixo do footer */
+  padding-bottom: calc(2.5rem + 5.5rem) !important;
+  margin-bottom: 0 !important;
+}
+
+.app-shell {
+  padding-bottom: 0 !important;
+}
+
+@media (min-width: 900px) {
+  .footer.block-night {
+    padding-bottom: 2.5rem !important;
+  }
+}
+
+.block-night::before,
+.block-moon::before {
+  background-image: none !important;
+}
+
+/* Chrome sticky: header + status acima do Hero */
+.app-chrome {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #fff3e0;
+  box-shadow: 0 6px 20px rgba(232, 93, 42, 0.12);
+}
+
+.app-chrome .nav,
+.app-chrome .nav--scrolled {
+  position: relative !important;
+  top: auto !important;
+  inset: auto !important;
+  z-index: 2 !important;
+  box-shadow: none !important;
+  padding-block: 0.75rem !important;
+}
+
+.app-chrome .app-status {
+  position: relative !important;
+  top: auto !important;
+  inset: auto !important;
+  z-index: 1 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem 0.75rem !important;
+  padding: 0.65rem var(--gutter) !important;
+  margin: 0 !important;
+  border-top: 1px solid #ffb04a !important;
+  border-bottom: 1px solid #ffb04a !important;
+  box-shadow: none !important;
+  text-align: center !important;
+}
+
+.app-chrome .app-status__modes {
+  margin-left: 0 !important;
+  width: auto;
+  justify-content: center;
+}
+
+.app-chrome .app-status__mode {
+  flex: initial;
+  text-align: center;
+}
+
+.hero {
+  padding-top: 1.5rem !important;
+}
+
+@media (min-width: 640px) {
+  .app-chrome .app-status {
+    justify-content: center !important;
+  }
+
+  .app-chrome .app-status__modes {
+    margin-left: 0 !important;
+    width: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .app-chrome .nav {
+    padding-block: 1rem !important;
+  }
+
+  .hero {
+    padding-top: 2rem !important;
+  }
+}
+
+/* Header / status / tabbar */
+.app-status,
+.nav,
+.nav--scrolled,
+.app-tabbar {
+  background: #fff3e0 !important;
+  color: #e85d2a !important;
+  border-color: #ffb04a !important;
+  backdrop-filter: none !important;
+}
+
+.app-tabbar {
+  box-shadow: 0 6px 20px rgba(232, 93, 42, 0.12) !important;
+}
+
+.nav__link,
+.nav__burger,
+.app-status__meta,
+.app-status__mode,
+.app-tabbar a,
+.logo__name,
+.logo--inverted .logo__name,
+.footer__links a,
+.footer__links li,
+.footer__copy,
+.footer__note,
+.text-muted-dark,
+.text-muted-light,
+.hero__slogan,
+.hero__lead,
+.hero__scroll,
+.menu__tab,
+.t-caption,
+.t-body,
+.t-lead {
+  color: #e85d2a !important;
+}
+
+/* Todos os títulos em preto */
+.t-brand,
+.t-h1,
+.t-h2,
+.t-h3,
+.section-head .t-label,
+.section-head .text-gold,
+.about__badge-title,
+.logo__name,
+.logo--inverted .logo__name,
+.payments__sub,
+.coupon-rail__head .t-h3,
+.kids__card .t-h3,
+.order__platform .t-h3,
+.cart-drawer__head .t-h3,
+.nav__mobile-link {
+  color: #000000 !important;
+}
+
+.logo--inverted .logo__slogan,
+.text-gold,
+.menu__price,
+.app-status__meta strong,
+.nav__link:hover,
+.app-tabbar a:hover,
+.app-tabbar a.is-active,
+.footer__links a:hover {
+  color: #e85d2a !important;
+}
+
+.app-status__pill {
+  background: #22c55e !important;
+  color: #fff3e0 !important;
+  animation: pill-float 2.4s ease-in-out infinite;
+  will-change: transform;
+  box-shadow: 0 6px 14px rgba(34, 197, 94, 0.35) !important;
+}
+
+.app-status__pill::before {
+  background: #15803d !important;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35) !important;
+}
+
+@keyframes pill-float {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 6px 14px rgba(34, 197, 94, 0.35);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 22px rgba(34, 197, 94, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-status__pill {
+    animation: none;
+  }
+}
+
+.app-status__modes {
+  background: #ffb04a !important;
+}
+
+.app-status__mode--active,
+.menu__tab--active,
+.btn-primary,
+.btn-dark,
+.cart-fab,
+.nav__cta {
+  background: linear-gradient(120deg, #e85d2a 0%, #ffb04a 100%) !important;
+  color: #fff3e0 !important;
+  border: none !important;
+  box-shadow: 0 10px 24px rgba(232, 93, 42, 0.25) !important;
+}
+
+.btn-primary:hover,
+.btn-dark:hover,
+.cart-fab:hover {
+  background: linear-gradient(120deg, #ffb04a 0%, #e85d2a 100%) !important;
+  color: #fff3e0 !important;
+}
+
+.btn-ghost {
+  background: #fff3e0 !important;
+  color: #e85d2a !important;
+  border: 2px solid #e85d2a !important;
+}
+
+.btn-ghost:hover {
+  background: #ffb04a !important;
+  color: #e85d2a !important;
+}
+
+/* Hero */
+.hero {
+  color: #e85d2a !important;
+}
+
+.hero__overlay {
+  background: linear-gradient(
+    105deg,
+    rgba(255, 243, 224, 0.96) 0%,
+    rgba(255, 243, 224, 0.85) 40%,
+    rgba(255, 176, 74, 0.5) 100%
+  ) !important;
+}
+
+.hero__brand {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: #000000 !important;
+}
+
+.hero__glow {
+  background: radial-gradient(ellipse at center, rgba(255, 176, 74, 0.55), transparent 65%) !important;
+}
+
+.t-label {
+  color: #000000 !important;
+}
+
+/* Cards / blocos */
+.about__badge,
+.order__platform,
+.payments__tickets li,
+.coupon-list__item,
+.coupon-card,
+.menu__item,
+.identity__logo-panel,
+.identity__grad-demo,
+.menu-search,
+.coupon-form,
+.payments__methods li,
+.cart-item {
+  background: #fff3e0 !important;
+  color: #e85d2a !important;
+  border: 1px solid #ffb04a !important;
+}
+
+.coupon-card {
+  background: linear-gradient(145deg, #fff3e0, #ffb04a) !important;
+  border: 1px dashed #e85d2a !important;
+}
+
+.coupon-card__code,
+.payments__ticket-type,
+.coupon-list__item strong,
+.payments__check {
+  color: #e85d2a !important;
+}
+
+.coupon-card__desc,
+.coupon-list__meta,
+.cart-item__qty,
+.order__platform .t-caption {
+  color: rgba(232, 93, 42, 0.75) !important;
+}
+
+.menu__add,
+.coupon-card__btn,
+.coupon-list__tag {
+  background: #ffb04a !important;
+  color: #e85d2a !important;
+}
+
+.menu__badge,
+.kids__tag,
+.coupon-list__tag,
+.payments__banner {
+  background: linear-gradient(120deg, #e85d2a, #ffb04a) !important;
+  color: #ffffff !important;
+}
+
+.payments__banner .t-caption {
+  color: #ffffff !important;
+}
+
+.moments > .container > .section-head,
+.moments > .container > .section-head .t-label,
+.moments > .container > .section-head .t-h2,
+.moments > .container > .section-head .t-lead,
+.moments > .container > .section-head .text-gold,
+.moments > .container > .section-head .text-muted-dark {
+  color: #000000 !important;
+}
+
+.moments__caption {
+  background: linear-gradient(
+    transparent,
+    rgba(42, 8, 8, 0.55) 35%,
+    rgba(42, 8, 8, 0.9) 100%
+  ) !important;
+  color: #ffffff !important;
+}
+
+.moments__caption .t-label {
+  color: #ffb04a !important;
+}
+
+.moments__caption h3,
+.moments__caption .t-h3,
+.moments__caption p,
+.moments__caption .t-caption {
+  color: #ffffff !important;
+}
+
+.moments__caption p {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.kids__banner .t-h3,
+.kids__banner .t-caption,
+.kids__banner p,
+.kids__banner * {
+  color: #000000 !important;
+}
+
+.payments__banner .t-h3,
+.payments__banner .t-caption,
+.payments__banner p {
+  color: #ffffff !important;
+}
+
+.kids__card .t-h3,
+.kids__card .t-caption,
+.kids__card p {
+  color: #000000 !important;
+}
+
+.moments__btn,
+.cart-drawer__close,
+.nav__burger {
+  background: #ffb04a !important;
+  color: #e85d2a !important;
+  border: 1px solid #e85d2a !important;
+}
+
+.moments__dot {
+  background: #ffb04a !important;
+}
+
+.moments__dot--active {
+  background: #e85d2a !important;
+}
+
+.menu-search input,
+.field input,
+.field select,
+.field textarea,
+.cart-coupon input {
+  background: #fff3e0 !important;
+  color: #e85d2a !important;
+  border: 1px solid #ffb04a !important;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus,
+.cart-coupon input:focus {
+  border-color: #e85d2a !important;
+  box-shadow: 0 0 0 3px rgba(255, 176, 74, 0.45) !important;
+}
+
+.field label {
+  color: #e85d2a !important;
+}
+
+.cart-coupon button,
+.cart-fab__count {
+  background: #e85d2a !important;
+  color: #fff3e0 !important;
+}
+
+.cart-summary__row--total,
+.cart-summary__discount {
+  color: #e85d2a !important;
+}
+
+.identity__type-sample,
+.identity__type-row,
+.identity__hex {
+  color: #e85d2a !important;
+  border-color: #ffb04a !important;
+}
+
+.identity__grad-bar {
+  background: linear-gradient(90deg, #e85d2a, #ffb04a, #fff3e0) !important;
+}
+
+.about__icon {
+  background: #ffb04a !important;
+  color: #e85d2a !important;
+}
+
+.about__pillar {
+  border-color: #ffb04a !important;
+}
+
+.footer__copy {
+  border-color: #ffb04a !important;
+}
+
+.menu__tab {
+  background: #fff3e0 !important;
+  border: 1px solid #ffb04a !important;
+  color: #e85d2a !important;
+}
+
+.menu__photo {
+  border: 2px solid #ffb04a;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}

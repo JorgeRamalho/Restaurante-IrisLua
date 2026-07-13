@@ -1,0 +1,214 @@
+/* =====================================================
+   Fundo Laranja Claro — sobrescreve fundos escuros
+   Acentos vermelho→laranja só em CTAs / marca
+===================================================== */
+
+body,
+.app-shell {
+  background: #fff3e0 !important;
+  color: #2a0808 !important;
+}
+
+.block-night,
+.block-moon,
+.footer,
+.nav__drawer {
+  background: linear-gradient(180deg, #fff8f0 0%, #fff3e0 45%, #ffe8cc 100%) !important;
+  color: #2a0808 !important;
+}
+
+.block-night::before,
+.block-moon::before {
+  background-image: radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 176, 74, 0.35),
+      transparent 45%
+    ),
+    radial-gradient(circle at 85% 75%, rgba(232, 93, 42, 0.18), transparent 42%) !important;
+  opacity: 0.9 !important;
+}
+
+/* Alternância sutil entre seções (ainda laranja claro) */
+.block-moon {
+  background: linear-gradient(180deg, #fff3e0 0%, #ffe8cc 55%, #ffd8a8 100%) !important;
+}
+
+.app-status,
+.app-tabbar,
+.nav--scrolled {
+  background: rgba(255, 243, 224, 0.95) !important;
+  color: #2a0808 !important;
+  border-color: rgba(240, 122, 46, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(232, 93, 42, 0.12) !important;
+}
+
+.app-status__meta,
+.app-status__mode,
+.nav__link,
+.nav__burger,
+.logo__name,
+.logo--inverted .logo__name,
+.hero__slogan,
+.hero__lead,
+.hero__scroll,
+.text-muted-dark,
+.footer__links a,
+.footer__links li,
+.footer__copy,
+.footer__note,
+.menu__tab,
+.order__platform .t-caption {
+  color: rgba(42, 8, 8, 0.72) !important;
+}
+
+.logo--inverted .logo__slogan,
+.text-gold,
+.menu__price,
+.app-tabbar a:hover,
+.app-tabbar a.is-active,
+.nav__link:hover,
+.app-status__meta strong {
+  color: #f07a2e !important;
+}
+
+.app-status__mode--active,
+.menu__tab--active,
+.btn-primary,
+.cart-fab {
+  background: linear-gradient(120deg, #c62828 0%, #e85d2a 45%, #ffb04a 100%) !important;
+  color: #fff8f0 !important;
+  border-color: transparent !important;
+}
+
+.btn-ghost {
+  color: #2a0808 !important;
+  border-color: rgba(240, 122, 46, 0.45) !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
+.btn-dark {
+  background: linear-gradient(120deg, #c62828, #e85d2a) !important;
+  color: #fff8f0 !important;
+}
+
+.btn-dark:hover {
+  background: linear-gradient(120deg, #e02020, #f07a2e) !important;
+}
+
+/* Hero: overlay laranja claro */
+.hero {
+  color: #2a0808 !important;
+}
+
+.hero__overlay {
+  background: linear-gradient(
+    105deg,
+    rgba(255, 248, 240, 0.96) 0%,
+    rgba(255, 232, 204, 0.88) 40%,
+    rgba(255, 176, 74, 0.4) 100%
+  ) !important;
+}
+
+.hero__brand {
+  background: linear-gradient(115deg, #c62828 0%, #e85d2a 45%, #ffb04a 100%) !important;
+  background-size: 180% 180% !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.hero__glow {
+  background: radial-gradient(ellipse at center, rgba(255, 176, 74, 0.45), transparent 65%) !important;
+}
+
+/* Cards / listas que eram escuros */
+.about__badge,
+.order__platform,
+.payments__tickets li,
+.coupon-list__item,
+.coupon-card,
+.menu__item,
+.identity__logo-panel,
+.identity__grad-demo {
+  background: rgba(255, 255, 255, 0.65) !important;
+  color: #2a0808 !important;
+  border: 1px solid rgba(240, 122, 46, 0.28) !important;
+}
+
+.coupon-card {
+  background: linear-gradient(145deg, #fff8f0, #ffe8cc 55%, #ffd8a8) !important;
+  border-style: dashed !important;
+}
+
+.coupon-card__code,
+.payments__ticket-type,
+.coupon-list__item strong {
+  color: #e85d2a !important;
+}
+
+.coupon-card__desc,
+.coupon-list__meta {
+  color: rgba(42, 8, 8, 0.7) !important;
+}
+
+.menu__add,
+.coupon-card__btn {
+  background: rgba(240, 122, 46, 0.15) !important;
+  color: #e85d2a !important;
+}
+
+.menu__badge {
+  background: linear-gradient(120deg, #c62828, #ffb04a) !important;
+  color: #fff8f0 !important;
+}
+
+.moments__caption {
+  background: linear-gradient(transparent, rgba(255, 243, 224, 0.96)) !important;
+  color: #2a0808 !important;
+}
+
+.moments__caption .t-label {
+  color: #e85d2a !important;
+}
+
+.moments__caption p {
+  color: rgba(42, 8, 8, 0.7) !important;
+}
+
+.moments__btn {
+  background: rgba(255, 255, 255, 0.7) !important;
+  color: #2a0808 !important;
+  border-color: rgba(240, 122, 46, 0.35) !important;
+}
+
+.menu-search {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(240, 122, 46, 0.3) !important;
+}
+
+.menu-search input {
+  color: #2a0808 !important;
+}
+
+.identity__type-sample,
+.identity__type-row {
+  color: #2a0808 !important;
+  border-color: rgba(240, 122, 46, 0.2) !important;
+}
+
+.app-tabbar a {
+  color: rgba(42, 8, 8, 0.65) !important;
+}
+
+.cart-drawer__panel {
+  background: #fff3e0 !important;
+}
+
+.payments__banner {
+  background: linear-gradient(135deg, #c62828 0%, #e85d2a 50%, #ffb04a 100%) !important;
+  color: #fff8f0 !important;
+}
+
+.payments__banner .t-caption {
+  color: rgba(255, 248, 240, 0.9) !important;
+}

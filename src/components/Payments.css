@@ -1,0 +1,100 @@
+.payments__head {
+  max-width: 42rem;
+}
+
+.payments__banner {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: var(--radius-md);
+  background: var(--grad-brand);
+  color: var(--text-on-dark);
+  box-shadow: 0 18px 40px rgba(10, 22, 40, 0.18);
+}
+
+.payments__banner .t-h3 {
+  margin-bottom: 0.25rem;
+}
+
+.payments__banner .t-caption {
+  opacity: 0.85;
+  max-width: 40rem;
+}
+
+.payments__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.payments__sub {
+  color: var(--sage-500);
+  margin-bottom: 1rem;
+}
+
+.payments__methods {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.payments__methods li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1.1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(21, 32, 43, 0.08);
+  font-weight: 600;
+}
+
+.payments__emoji {
+  font-size: 1.25rem;
+}
+
+.payments__check {
+  color: var(--sage-500);
+}
+
+.payments__tickets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0.75rem;
+}
+
+.payments__tickets li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--night-900);
+  color: var(--text-on-dark);
+  min-height: 5.5rem;
+  justify-content: space-between;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.payments__tickets li:hover {
+  transform: translateY(-3px);
+}
+
+.payments__ticket-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+
+.payments__ticket-type {
+  color: var(--gold-400);
+}
+
+@media (min-width: 860px) {
+  .payments__grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}

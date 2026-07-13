@@ -1,0 +1,110 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding: 7rem 0 5rem;
+  color: var(--text-on-dark);
+  overflow: hidden;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.04);
+  animation: hero-zoom 18s ease-in-out infinite alternate;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--grad-hero-overlay);
+}
+
+.hero__glow {
+  position: absolute;
+  inset: auto -10% -20% 30%;
+  height: 55%;
+  background: radial-gradient(ellipse at center, rgba(232, 184, 74, 0.22), transparent 65%);
+  pointer-events: none;
+  animation: float-soft 8s ease-in-out infinite;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 40rem;
+  padding-bottom: 1rem;
+}
+
+.hero__brand {
+  background: linear-gradient(115deg, #f5f7fa 10%, #e8b84a 55%, #f0c95a 85%);
+  background-size: 180% 180%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 7s ease-in-out infinite alternate;
+  margin: 0.35rem 0 0.5rem;
+}
+
+.hero__slogan {
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  font-style: italic;
+  font-weight: 500;
+  color: rgba(245, 247, 250, 0.88);
+  margin-bottom: 1.1rem;
+}
+
+.hero__lead {
+  margin-bottom: 1.75rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 1.5rem;
+  right: var(--gutter);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-on-dark-muted);
+  writing-mode: horizontal-tb;
+}
+
+.hero__scroll svg {
+  animation: float-soft 2.4s ease-in-out infinite;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    align-items: center;
+    padding: 6rem 0 4rem;
+  }
+
+  .hero__content {
+    max-width: 44rem;
+  }
+}

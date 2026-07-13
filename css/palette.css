@@ -1,0 +1,67 @@
+/* Íris Lua — paleta exclusiva (3 cores)
+   #E85D2A  #FFB04A  #FFF3E0
+*/
+
+:root {
+  --c-strong: #e85d2a;
+  --c-mid: #ffb04a;
+  --c-light: #fff3e0;
+
+  --night-950: var(--c-light);
+  --night-900: var(--c-light);
+  --night-800: var(--c-mid);
+  --night-700: var(--c-strong);
+
+  --moon-50: var(--c-light);
+  --moon-100: var(--c-light);
+  --moon-200: var(--c-mid);
+
+  --gold-400: var(--c-mid);
+  --gold-500: var(--c-strong);
+  --gold-600: var(--c-strong);
+  --sage-500: var(--c-strong);
+  --sage-400: var(--c-mid);
+  --ember-500: var(--c-strong);
+
+  --text-on-dark: var(--c-strong);
+  --text-on-dark-muted: rgba(232, 93, 42, 0.72);
+  --text-on-light: var(--c-strong);
+  --text-on-light-muted: rgba(232, 93, 42, 0.72);
+
+  --grad-brand: linear-gradient(135deg, #e85d2a 0%, #ffb04a 100%);
+  --grad-night: linear-gradient(180deg, #fff3e0 0%, #ffb04a 100%);
+  --grad-moon: linear-gradient(180deg, #fff3e0 0%, #ffb04a 55%, #fff3e0 100%);
+  --grad-gold: linear-gradient(120deg, #e85d2a 0%, #ffb04a 100%);
+  --grad-hero-overlay: linear-gradient(
+    105deg,
+    rgba(255, 243, 224, 0.96) 0%,
+    rgba(255, 243, 224, 0.88) 45%,
+    rgba(255, 176, 74, 0.55) 100%
+  );
+
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Figtree", "Segoe UI", sans-serif;
+
+  --fs-hero-brand: clamp(3.2rem, 8vw, 6.5rem);
+  --fs-h1: clamp(2.4rem, 5vw, 3.75rem);
+  --fs-h2: clamp(1.85rem, 3.5vw, 2.75rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --fs-body: clamp(1rem, 1.1vw, 1.125rem);
+  --fs-caption: 0.8125rem;
+  --fs-label: 0.75rem;
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.25;
+  --lh-body: 1.65;
+
+  --tracking-brand: -0.02em;
+  --tracking-label: 0.14em;
+  --tracking-caption: 0.04em;
+
+  --max: 72rem;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-y: clamp(4.5rem, 10vw, 7.5rem);
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

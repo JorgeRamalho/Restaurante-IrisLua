@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Íris Lua — restaurante com delivery. Aceitamos Pix, cartões e todos os tickets de refeição e alimentação."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/palette.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/app-ui.css" />
+    <link rel="stylesheet" href="css/three-colors.css" />
+    <link rel="stylesheet" href="css/kids.css" />
+    <title>Íris Lua — Restaurante & Delivery</title>
+  </head>
+  <body class="app-shell">
+    <div class="app-chrome">
+      <header class="nav" id="nav">
+        <div class="nav__inner container">
+          <a href="#topo" class="logo logo--md logo--inverted">
+            <span class="logo__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="logoGradNav" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E85D2A" />
+                    <stop offset="0.55" stop-color="#FFB04A" />
+                    <stop offset="1" stop-color="#FFB04A" />
+                  </linearGradient>
+                </defs>
+                <circle cx="32" cy="32" r="30" fill="url(#logoGradNav)" />
+                <path
+                  d="M38 14c-10 2-17 11-17 22 0 8 4 15 11 19-12-2-20-13-20-25C12 17 22 8 34 8c1.4 0 2.7.1 4 .3z"
+                  fill="#FFF3E0"
+                  opacity="0.95"
+                />
+                <ellipse cx="40" cy="34" rx="7" ry="11" fill="#FFB04A" opacity="0.92" />
+                <ellipse cx="40" cy="34" rx="3" ry="5" fill="#E85D2A" />
+              </svg>
+            </span>
+            <span class="logo__word">
+              <span class="logo__name">Íris Lua</span>
+              <span class="logo__slogan">Sabores sob o luar</span>
+            </span>
+          </a>
+
+          <nav class="nav__desktop" aria-label="Principal">
+            <a href="#pagamentos" class="nav__link t-caption">Pagamentos</a>
+            <a href="#momentos" class="nav__link t-caption">Momentos</a>
+            <a href="#cardapio" class="nav__link t-caption">Cardápio</a>
+            <a href="#cupons" class="nav__link t-caption">Cupons</a>
+            <a href="#kids" class="nav__link t-caption">Espaço Kids</a>
+            <a href="#pedir" class="nav__link t-caption">Pedir</a>
+            <a href="#cardapio" class="btn btn-primary nav__cta">Pedir agora</a>
+          </nav>
+
+          <button type="button" class="nav__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false">
+            <span class="nav__burger-icon" id="navBurgerIcon">☰</span>
+          </button>
+        </div>
+
+        <div class="nav__drawer" id="navDrawer">
+          <div class="nav__drawer-head">
+            <span class="t-label">Menu</span>
+            <button type="button" class="nav__drawer-close" id="navDrawerClose" aria-label="Fechar menu">
+              ✕
+            </button>
+          </div>
+          <nav class="nav__mobile" aria-label="Mobile">
+            <a href="#pagamentos" class="nav__mobile-link t-h3">Pagamentos</a>
+            <a href="#momentos" class="nav__mobile-link t-h3">Momentos</a>
+            <a href="#cardapio" class="nav__mobile-link t-h3">Cardápio</a>
+            <a href="#cupons" class="nav__mobile-link t-h3">Cupons</a>
+            <a href="#kids" class="nav__mobile-link t-h3">Espaço Kids</a>
+            <a href="#pedir" class="nav__mobile-link t-h3">Pedir</a>
+            <a href="#cardapio" class="btn btn-primary">Pedir agora</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="app-status" role="status">
+        <span class="app-status__pill">Aberto agora</span>
+        <span class="app-status__meta"><strong>25–40 min</strong> · Entrega estimada</span>
+        <div class="app-status__modes" role="group" aria-label="Modo do pedido">
+          <button type="button" class="app-status__mode app-status__mode--active" data-mode="entrega">
+            Entrega
+          </button>
+          <button type="button" class="app-status__mode" data-mode="retirada">Retirada</button>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section id="topo" class="hero">
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80"
+            alt=""
+          />
+          <div class="hero__overlay"></div>
+          <div class="hero__glow"></div>
+        </div>
+
+        <div class="hero__content container">
+          <p class="t-label text-gold">Restaurante · Delivery · Takeaway</p>
+          <h1 class="t-brand hero__brand">Íris Lua</h1>
+          <p class="hero__slogan font-display">Sabores sob o luar</p>
+          <p class="t-lead text-muted-dark hero__lead">
+            Pratos assinados, retirada rápida e delivery nos apps que você já conhece. Aceitamos
+            todas as formas de pagamento e todos os tickets de refeição.
+          </p>
+          <div class="hero__actions">
+            <a href="#cardapio" class="btn btn-primary">✨ Ver cardápio</a>
+            <a href="#pedir" class="btn btn-ghost">Pedir no delivery</a>
+          </div>
+        </div>
+
+        <a href="#sobre" class="hero__scroll t-caption" aria-label="Rolar para baixo">
+          Explorar ↓
+        </a>
+      </section>
+
+      <!-- PAGAMENTOS -->
+      <section id="pagamentos" class="section block-moon payments">
+        <div class="container">
+          <div class="section-head payments__head">
+            <span class="t-label" style="color: var(--ember-500)">Formas de pagamento</span>
+            <h2 class="t-h2">Aceitamos tudo — dinheiro, cartão e todos os tickets</h2>
+            <p class="t-lead text-muted-light">
+              No salão, na retirada ou no delivery: Pix, crédito, débito e
+              <strong>todos os tipos de ticket de refeição e alimentação</strong>. Sem surpresa na
+              hora de pagar.
+            </p>
+          </div>
+
+          <div class="payments__banner">
+            <span style="font-size: 1.75rem" aria-hidden="true">👛</span>
+            <div>
+              <p class="t-h3">Garantia Íris Lua</p>
+              <p class="t-caption">
+                VR · Alelo · Pluxee · Ticket · Ben · Flash · Caju · iFood Benefícios e demais
+                bandeiras de vale-refeição e vale-alimentação.
+              </p>
+            </div>
+          </div>
+
+          <div class="payments__grid">
+            <div>
+              <h3 class="t-label payments__sub">Pagamentos</h3>
+              <ul class="payments__methods">
+                <li>
+                  <span class="payments__emoji">⚡</span><span>Pix</span><span class="payments__check">✓</span>
+                </li>
+                <li>
+                  <span class="payments__emoji">💳</span><span>Cartão de crédito</span
+                  ><span class="payments__check">✓</span>
+                </li>
+                <li>
+                  <span class="payments__emoji">💳</span><span>Cartão de débito</span
+                  ><span class="payments__check">✓</span>
+                </li>
+                <li>
+                  <span class="payments__emoji">💵</span><span>Dinheiro</span><span class="payments__check">✓</span>
+                </li>
+                <li>
+                  <span class="payments__emoji">📱</span><span>Pagamento no app</span
+                  ><span class="payments__check">✓</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="t-label payments__sub">Tickets de refeição & alimentação</h3>
+              <ul class="payments__tickets">
+                <li>
+                  <span class="payments__ticket-name">VR Refeição</span
+                  ><span class="t-caption payments__ticket-type">Refeição</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">VR Alimentação</span
+                  ><span class="t-caption payments__ticket-type">Alimentação</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">Alelo Refeição</span
+                  ><span class="t-caption payments__ticket-type">Refeição</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">Alelo Alimentação</span
+                  ><span class="t-caption payments__ticket-type">Alimentação</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">Pluxee (Sodexo)</span
+                  ><span class="t-caption payments__ticket-type">Refeição</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">Ticket Restaurant</span
+                  ><span class="t-caption payments__ticket-type">Refeição</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">Ben Visa Vale</span
+                  ><span class="t-caption payments__ticket-type">Refeição</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">Flash Benefícios</span
+                  ><span class="t-caption payments__ticket-type">Alimentação</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">Caju</span
+                  ><span class="t-caption payments__ticket-type">Refeição</span>
+                </li>
+                <li>
+                  <span class="payments__ticket-name">iFood Benefícios</span
+                  ><span class="t-caption payments__ticket-type">Refeição</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- MOMENTOS / CARROSSEL -->
+      <section id="momentos" class="section block-night moments">
+        <div class="container">
+          <div class="section-head">
+            <span class="t-label text-gold">Momentos Íris Lua</span>
+            <h2 class="t-h2">Do café da manhã ao jantar de negócios</h2>
+            <p class="t-lead text-muted-dark">
+              Famílias, buffet, almoço de trabalho e noites especiais — o ritmo do restaurante em
+              carrossel, como nos apps de delivery.
+            </p>
+          </div>
+
+          <div class="moments__viewport" aria-roledescription="carrossel">
+            <div class="moments__track" id="momentsTrack">
+              <article class="moments__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80"
+                  alt="Família e amigos confraternizando em restaurante"
+                />
+                <div class="moments__caption">
+                  <span class="t-label">Confraternização</span>
+                  <h3>Famílias e amigos à mesa</h3>
+                  <p>Risadas, brinde e aquela mesa cheia — o luar compartilhado.</p>
+                </div>
+              </article>
+              <article class="moments__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1400&q=80"
+                  alt="Pessoas se servindo em buffet"
+                />
+                <div class="moments__caption">
+                  <span class="t-label">Buffet</span>
+                  <h3>Se servindo à vontade</h3>
+                  <p>Variedade, frescor e o prazer de montar o próprio prato.</p>
+                </div>
+              </article>
+              <article class="moments__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1400&q=80"
+                  alt="Refeição pela manhã / café da manhã"
+                />
+                <div class="moments__caption">
+                  <span class="t-label">Manhã</span>
+                  <h3>Café e refeição matinal</h3>
+                  <p>Comece o dia com leveza — ovos, pães e frutas sob o luar suave.</p>
+                </div>
+              </article>
+              <article class="moments__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80"
+                  alt="Alimentação de tarde com café e doces"
+                />
+                <div class="moments__caption">
+                  <span class="t-label">Tarde</span>
+                  <h3>Lanche e pausa da tarde</h3>
+                  <p>Doces, café e um intervalo que parece fim de semana.</p>
+                </div>
+              </article>
+              <article class="moments__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=80"
+                  alt="Almoço do trabalho em ambiente casual"
+                />
+                <div class="moments__caption">
+                  <span class="t-label">Almoço</span>
+                  <h3>Almoço do trabalho</h3>
+                  <p>Rápido, saboroso e aceitando seu ticket de refeição.</p>
+                </div>
+              </article>
+              <article class="moments__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80"
+                  alt="Jantar de negócios em restaurante sofisticado"
+                />
+                <div class="moments__caption">
+                  <span class="t-label">Noite</span>
+                  <h3>Jantar de negócios</h3>
+                  <p>Ambiente elegante para fechar o dia — e o acordo — com classe.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="moments__controls">
+            <div class="moments__arrows">
+              <button type="button" class="moments__btn" id="momentsPrev" aria-label="Anterior">‹</button>
+              <button type="button" class="moments__btn" id="momentsNext" aria-label="Próximo">›</button>
+            </div>
+            <div class="moments__dots" id="momentsDots" role="tablist" aria-label="Slides"></div>
+          </div>
+        </div>
+      </section>
+
+<!-- SOBRE -->
+      <section id="sobre" class="section block-moon about">
+        <div class="container about__grid">
+          <div class="section-head">
+            <span class="t-label" style="color: var(--ember-500)">Nossa história</span>
+            <h2 class="t-h2">Uma marca feita para o luar e para o delivery</h2>
+            <p class="t-lead text-muted-light">
+              Cozinha contemporânea com alma de delivery — do fogão à sua mesa, sob o mesmo luar.
+            </p>
+          </div>
+
+          <div class="about__visual" aria-hidden="true">
+            <div class="about__frame">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80"
+                alt=""
+              />
+            </div>
+            <div class="about__badge">
+              <span class="t-label text-gold">Logomarca</span>
+              <p class="font-display about__badge-title">Lua + Íris</p>
+              <p class="t-caption text-muted-dark">
+                Crescente lunar e olho-íris em ouro — o símbolo da casa.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container about__pillars">
+          <article class="about__pillar">
+            <span class="about__icon">🌙</span>
+            <h3 class="t-h3">Identidade lunar</h3>
+            <p class="t-body text-muted-light">
+              Ambiente acolhedor, luz baixa e pratos pensados para o jantar — e para o delivery com o
+              mesmo cuidado.
+            </p>
+          </article>
+          <article class="about__pillar">
+            <span class="about__icon">🍽️</span>
+            <h3 class="t-h3">Cozinha viva</h3>
+            <p class="t-body text-muted-light">
+              Cardápio no ritmo dos apps: categorias claras, fotos reais e pratos que viajam bem até
+              a sua mesa.
+            </p>
+          </article>
+          <article class="about__pillar">
+            <span class="about__icon">🚴</span>
+            <h3 class="t-h3">Na sua porta</h3>
+            <p class="t-body text-muted-light">
+              Peça pelo iFood, 99Food ou Uber Eats. Retirada no balcão também, sem complicação.
+            </p>
+          </article>
+        </div>
+      </section>
+
+
+      <!-- CARDÁPIO -->
+      <section id="cardapio" class="section block-night menu">
+        <div class="container">
+          <div class="section-head">
+            <span class="t-label text-gold">Cardápio digital</span>
+            <h2 class="t-h2">Escolha como nos apps de delivery</h2>
+            <p class="t-lead text-muted-dark">
+              Categorias rápidas, cupons e carrinho — o mesmo fluxo do iFood, 99Food e Uber Eats.
+            </p>
+          </div>
+
+          <div class="coupon-rail" id="couponRail">
+            <div class="coupon-rail__head">
+              <h3 class="t-h3">Cupons disponíveis</h3>
+              <a href="#cupons" class="t-caption text-gold">Cadastrar cupom →</a>
+            </div>
+            <div class="coupon-rail__track" id="couponTrack"></div>
+          </div>
+
+          <div class="menu__tabs" role="tablist" aria-label="Categorias do cardápio" id="menuTabs"></div>
+          <div class="menu__grid" role="tabpanel" id="menuGrid"></div>
+        </div>
+      </section>
+      <!-- CUPONS / FORMULÁRIO -->
+      <section id="cupons" class="section block-moon coupon-form-section">
+        <div class="container">
+          <div class="section-head">
+            <span class="t-label" style="color: var(--ember-500)">Cupons & descontos</span>
+            <h2 class="t-h2">Cadastre e gerencie promoções</h2>
+            <p class="t-lead text-muted-light">
+              Crie códigos como nos apps: percentual, valor fixo ou frete grátis. Os cupons aparecem
+              na faixa do cardápio e podem ser aplicados no carrinho.
+            </p>
+          </div>
+
+          <div class="coupon-layout">
+            <form class="coupon-form" id="couponForm" novalidate>
+              <div class="coupon-form__row coupon-form__row--2">
+                <div class="field">
+                  <label for="couponCode">Código do cupom</label>
+                  <input
+                    id="couponCode"
+                    name="code"
+                    type="text"
+                    maxlength="20"
+                    placeholder="Ex: LUAR10"
+                    required
+                  />
+                  <span class="field-hint">Letras e números, sem espaços</span>
+                </div>
+                <div class="field">
+                  <label for="couponType">Tipo de desconto</label>
+                  <select id="couponType" name="type" required>
+                    <option value="percent">Percentual (%)</option>
+                    <option value="fixed">Valor fixo (R$)</option>
+                    <option value="frete">Frete grátis</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="coupon-form__row coupon-form__row--2">
+                <div class="field">
+                  <label for="couponValue">Valor do desconto</label>
+                  <input
+                    id="couponValue"
+                    name="value"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    placeholder="Ex: 10"
+                    required
+                  />
+                  <span class="field-hint">Para frete grátis, use 0</span>
+                </div>
+                <div class="field">
+                  <label for="couponMin">Pedido mínimo (R$)</label>
+                  <input
+                    id="couponMin"
+                    name="minOrder"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    placeholder="Ex: 50"
+                    value="0"
+                  />
+                </div>
+              </div>
+
+              <div class="coupon-form__row coupon-form__row--2">
+                <div class="field">
+                  <label for="couponValid">Válido até</label>
+                  <input id="couponValid" name="validUntil" type="date" required />
+                </div>
+                <div class="field">
+                  <label for="couponChannel">Canal</label>
+                  <select id="couponChannel" name="channel">
+                    <option value="todos">Todos os canais</option>
+                    <option value="app">Só no app / site</option>
+                    <option value="ifood">iFood</option>
+                    <option value="99">99Food</option>
+                    <option value="uber">Uber Eats</option>
+                    <option value="salao">Salão / retirada</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="couponDesc">Descrição da promoção</label>
+                <textarea
+                  id="couponDesc"
+                  name="description"
+                  placeholder="Ex: 10% off no primeiro pedido acima de R$ 50"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="coupon-form__actions">
+                <button type="submit" class="btn btn-dark">Cadastrar cupom</button>
+                <button type="reset" class="btn btn-ghost">
+                  Limpar
+                </button>
+                <p class="coupon-form__msg" id="couponFormMsg" aria-live="polite"></p>
+              </div>
+            </form>
+
+            <div>
+              <h3 class="t-label payments__sub" style="margin-bottom: 1rem">Cupons cadastrados</h3>
+              <div class="coupon-list" id="couponList"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+<!-- ESPAÇO KIDS -->
+      <section id="kids" class="section block-night kids">
+        <div class="container">
+          <div class="section-head">
+            <span class="t-label text-gold">Espaço Kids</span>
+            <h2 class="t-h2">Brinquedos e brincadeiras para a criançada</h2>
+            <p class="t-lead text-muted-dark">
+              Enquanto a família aproveita a refeição, as crianças se divertem com segurança no
+              nosso cantinho especial.
+            </p>
+          </div>
+
+          <div class="kids__banner">
+            <p class="t-h3">Horário do Espaço Kids</p>
+            <p class="t-caption">
+              Aberto todos os dias no horário de funcionamento do restaurante. Indicado para
+              crianças de 2 a 10 anos, com supervisão dos responsáveis.
+            </p>
+          </div>
+
+          <div class="kids__grid">
+            <article class="kids__card">
+              <span class="kids__emoji" aria-hidden="true">🏰</span>
+              <span class="kids__tag">Brinquedo</span>
+              <h3 class="t-h3">Playground indoor</h3>
+              <p class="t-caption">
+                Escorregador, túneis e área acolchoada para brincar com segurança.
+              </p>
+            </article>
+            <article class="kids__card">
+              <span class="kids__emoji" aria-hidden="true">🧱</span>
+              <span class="kids__tag">Brinquedo</span>
+              <h3 class="t-h3">Blocos e monta-monta</h3>
+              <p class="t-caption">
+                Blocos coloridos, encaixes e peças para estimular a criatividade.
+              </p>
+            </article>
+            <article class="kids__card">
+              <span class="kids__emoji" aria-hidden="true">🎨</span>
+              <span class="kids__tag">Brincadeira</span>
+              <h3 class="t-h3">Cantinho da arte</h3>
+              <p class="t-caption">
+                Desenhos, giz de cera e atividades guiadas para pintar e criar.
+              </p>
+            </article>
+            <article class="kids__card">
+              <span class="kids__emoji" aria-hidden="true">📚</span>
+              <span class="kids__tag">Brincadeira</span>
+              <h3 class="t-h3">Leitura infantil</h3>
+              <p class="t-caption">
+                Estante com livros ilustrados e historinhas para relaxar depois de brincar.
+              </p>
+            </article>
+            <article class="kids__card">
+              <span class="kids__emoji" aria-hidden="true">🧸</span>
+              <span class="kids__tag">Brinquedo</span>
+              <h3 class="t-h3">Pelúcias e faz de conta</h3>
+              <p class="t-caption">
+                Bonequinhos, panelinhas e cenário de casinha para brincar de imaginar.
+              </p>
+            </article>
+            <article class="kids__card">
+              <span class="kids__emoji" aria-hidden="true">🎲</span>
+              <span class="kids__tag">Brincadeira</span>
+              <h3 class="t-h3">Jogos de mesa kids</h3>
+              <p class="t-caption">
+                Quebra-cabeças, memória e jogos leves para todas as idades.
+              </p>
+            </article>
+          </div>
+
+          <div class="kids__visual">
+            <img
+              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80"
+              alt="Criança brincando com tinta no rosto"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80"
+              alt="Criança sorrindo e brincando"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+<!-- PEDIR -->
+      <section id="pedir" class="section block-moon order">
+        <div class="container order__layout">
+          <div class="section-head">
+            <span class="t-label" style="color: var(--ember-500)">Peça agora</span>
+            <h2 class="t-h2">Nos apps que você já usa</h2>
+            <p class="t-lead text-muted-light">
+              Abra o iFood, 99Food ou Uber Eats, busque <strong>Íris Lua</strong> e finalize com a
+              forma de pagamento ou ticket que preferir.
+            </p>
+          </div>
+
+          <div class="order__platforms">
+            <a href="#" class="order__platform">
+              <div>
+                <p class="t-h3">iFood</p>
+                <p class="t-caption text-muted-light">Peça agora</p>
+              </div>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a href="#" class="order__platform">
+              <div>
+                <p class="t-h3">99Food</p>
+                <p class="t-caption text-muted-light">Delivery rápido</p>
+              </div>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a href="#" class="order__platform">
+              <div>
+                <p class="t-h3">Uber Eats</p>
+                <p class="t-caption text-muted-light">Na sua porta</p>
+              </div>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="order__info">
+            <div class="order__info-item">
+              <span aria-hidden="true">📍</span>
+              <div>
+                <p class="t-label">Endereço</p>
+                <p>Rua das Estrelas, 188 — Vila Madalena, São Paulo</p>
+              </div>
+            </div>
+            <div class="order__info-item">
+              <span aria-hidden="true">🕐</span>
+              <div>
+                <p class="t-label">Horários</p>
+                <p>Seg–Qui 11h–23h · Sex–Sáb 11h–00h · Dom 12h–22h</p>
+              </div>
+            </div>
+            <div class="order__info-item">
+              <span aria-hidden="true">📞</span>
+              <div>
+                <p class="t-label">Telefone</p>
+                <p>(11) 98888-2200</p>
+              </div>
+            </div>
+            <a
+              class="btn btn-primary order__whats"
+              href="https://wa.me/5511988882200?text=Ol%C3%A1!%20Quero%20pedir%20no%20%C3%8Dris%20Lua."
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- GALERIA -->
+      <section id="galeria" class="section block-night gallery">
+        <div class="container">
+          <div class="section-head">
+            <span class="t-label text-gold">Galeria</span>
+            <h2 class="t-h2">O luar, a mesa, o prato</h2>
+            <p class="t-lead text-muted-dark">
+              Atmosfera do salão e detalhes da cozinha — imagens reais do ritmo Íris Lua.
+            </p>
+          </div>
+
+          <div class="gallery__mosaic">
+            <figure class="gallery__shot gallery__shot--1">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
+                alt="Prato assinado no salão"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__shot gallery__shot--2">
+              <img
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
+                alt="Ambiente Íris Lua à noite"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__shot gallery__shot--3">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+                alt="Detalhe gastronômico"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__shot gallery__shot--4">
+              <img
+                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=80"
+                alt="Mesa preparada para jantar"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__shot gallery__shot--5">
+              <img
+                src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=80"
+                alt="Cozinha em movimento"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__shot gallery__shot--6">
+              <img
+                src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80"
+                alt="Sobremesa da casa"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>    </main>
+
+    <footer class="footer block-night">
+      <div class="container footer__inner">
+        <a href="#topo" class="logo logo--lg logo--inverted">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none">
+              <defs>
+                <linearGradient id="logoGradFoot" x1="8" y1="4" x2="56" y2="60">
+                  <stop stop-color="#E85D2A" />
+                  <stop offset="0.55" stop-color="#FFB04A" />
+                  <stop offset="1" stop-color="#FFB04A" />
+                </linearGradient>
+              </defs>
+              <circle cx="32" cy="32" r="30" fill="url(#logoGradFoot)" />
+              <path
+                d="M38 14c-10 2-17 11-17 22 0 8 4 15 11 19-12-2-20-13-20-25C12 17 22 8 34 8c1.4 0 2.7.1 4 .3z"
+                  fill="#FFF3E0"
+                opacity="0.95"
+              />
+              <ellipse cx="40" cy="34" rx="7" ry="11" fill="#FFB04A" opacity="0.92" />
+              <ellipse cx="40" cy="34" rx="3" ry="5" fill="#E85D2A" />
+            </svg>
+          </span>
+          <span class="logo__word">
+            <span class="logo__name">Íris Lua</span>
+            <span class="logo__slogan">Sabores sob o luar</span>
+          </span>
+        </a>
+
+        <div class="footer__cols">
+          <div>
+            <p class="t-label text-gold">Navegação</p>
+            <ul class="footer__links">
+              <li><a href="#pagamentos">Pagamentos</a></li>
+              <li><a href="#momentos">Momentos</a></li>
+              <li><a href="#cardapio">Cardápio</a></li>
+              <li><a href="#cupons">Cupons</a></li>
+              <li><a href="#kids">Espaço Kids</a></li>
+              <li><a href="#pedir">Pedir</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="t-label text-gold">Contato</p>
+            <ul class="footer__links">
+              <li>Rua das Estrelas, 188 — Vila Madalena, São Paulo</li>
+              <li><a href="tel:11988882200">(11) 98888-2200</a></li>
+              <li><a href="mailto:ola@iris.lua">ola@iris.lua</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="t-label text-gold">Pagamentos</p>
+            <p class="t-caption text-muted-dark footer__note">
+              Pix, cartões e todos os tickets de refeição e alimentação.
+            </p>
+          </div>
+        </div>
+
+        <p class="t-caption text-muted-dark footer__copy">
+          © <span id="year"></span> Restaurante Íris Lua. Sabores sob o luar.
+        </p>
+      </div>
+    </footer>
+
+    <button type="button" class="cart-fab" id="cartFab" aria-label="Abrir sacola">
+      <span class="cart-fab__count" id="cartCount">0</span>
+      <span>Ver sacola</span>
+      <span id="cartFabTotal">R$ 0,00</span>
+    </button>
+
+    <nav class="app-tabbar" aria-label="Navegação do app">
+      <a href="#topo" data-tab="home"><span aria-hidden="true">🏠</span>Início</a>
+      <a href="#cardapio" data-tab="menu"><span aria-hidden="true">🍽️</span>Cardápio</a>
+      <a href="#cupons" data-tab="coupons"><span aria-hidden="true">🎟️</span>Cupons</a>
+      <a href="#pedir" data-tab="order"><span aria-hidden="true">📦</span>Pedidos</a>
+      <a href="#sobre" data-tab="profile"><span aria-hidden="true">👤</span>Perfil</a>
+    </nav>
+
+    <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-drawer__backdrop" id="cartBackdrop"></div>
+      <div class="cart-drawer__panel" role="dialog" aria-labelledby="cartTitle">
+        <div class="cart-drawer__head">
+          <h2 class="t-h3" id="cartTitle">Sua sacola</h2>
+          <button type="button" class="cart-drawer__close" id="cartClose" aria-label="Fechar">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-coupon">
+          <input id="cartCouponInput" type="text" placeholder="Código do cupom" maxlength="20" />
+          <button type="button" id="cartCouponApply">Aplicar</button>
+        </div>
+        <p class="t-caption" id="cartCouponMsg" style="margin: -0.5rem 0 0.75rem; color: var(--ember-500)"></p>
+        <div class="cart-summary" id="cartSummary"></div>
+        <a href="#pedir" class="btn btn-primary" id="cartCheckout" style="width: 100%">
+          Finalizar pedido
+        </a>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
