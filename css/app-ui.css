@@ -75,6 +75,104 @@
   color: var(--night-900);
 }
 
+/* Logos de delivery na barra de status */
+.app-status__brands {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.app-status__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.65rem 0.28rem 0.28rem;
+  border-radius: 999px;
+  border: 1px solid #ffb04a;
+  background: #fff3e0;
+  color: #e85d2a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  animation: brand-pulse 2.2s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-status__brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* Cores oficiais das marcas */
+.app-status__brand--ifood {
+  border-color: #ea1d2c;
+  color: #ea1d2c;
+}
+
+.app-status__brand--ifood .app-status__brand-mark {
+  background: #ea1d2c;
+  color: #ffffff;
+}
+
+.app-status__brand--99 {
+  animation-delay: 0.35s;
+  border-color: #ffdd00;
+  color: #1a1a1a;
+}
+
+.app-status__brand--99 .app-status__brand-mark {
+  background: #ffdd00;
+  color: #1a1a1a;
+}
+
+.app-status__brand--uber {
+  animation-delay: 0.7s;
+  border-color: #06c167;
+  color: #06c167;
+}
+
+.app-status__brand--uber .app-status__brand-mark {
+  background: #06c167;
+  color: #ffffff;
+}
+
+.app-status__brand--ifood:hover {
+  box-shadow: 0 0 0 3px rgba(234, 29, 44, 0.28);
+}
+
+.app-status__brand--99:hover {
+  box-shadow: 0 0 0 3px rgba(255, 221, 0, 0.45);
+}
+
+.app-status__brand--uber:hover {
+  box-shadow: 0 0 0 3px rgba(6, 193, 103, 0.3);
+}
+
+@keyframes brand-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-status__brand {
+    animation: none;
+  }
+}
+
 /* Cupons em faixa (estilo iFood) */
 .coupon-rail {
   padding: 1.25rem 0 0.25rem;

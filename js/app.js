@@ -139,6 +139,113 @@ const menuCategories = [
         image:
           "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=800&q=80",
       },
+      {
+        id: "strogonoff-file",
+        name: "Strogonoff de Filé",
+        description: "Filé mignon em cubos, creme, champignon, arroz soltinho e batata palha.",
+        price: 59.9,
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/5/5f/Beef_Stroganoff-02_cropped.jpg",
+        badge: "Novo",
+      },
+      {
+        id: "parmegiana-file",
+        name: "Filé à Parmegiana",
+        description: "Filé empanado, molho de tomate caseiro, mussarela gratinada e arroz.",
+        price: 62.9,
+        image:
+          "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: "moqueca-camarao",
+        name: "Moqueca de Camarão",
+        description: "Camarões no leite de coco, dendê, pimentões e pirão da casa.",
+        price: 78.9,
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/f/f9/Moqueca_de_frutos_do_mar_%28seafood_stew%2C_Brazilian_style%29_%2851338403464%29.jpg",
+      },
+      {
+        id: "nhoque-pomodoro",
+        name: "Nhoque ao Pomodoro",
+        description: "Nhoque artesanal, molho de tomate fresco, manjericão e parmesão.",
+        price: 44.9,
+        image:
+          "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: "costela-bbq",
+        name: "Costela BBQ Desfiada",
+        description: "Costela lenta, molho barbecue defumado, purê rústico e cebola crispy.",
+        price: 66.9,
+        image:
+          "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: "bife-acebolado",
+        name: "Bife Acebolado do Luar",
+        description: "Contrafilé grelhado, cebolas caramelizadas, arroz e feijão tropeiro.",
+        price: 54.9,
+        image:
+          "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: "camarao-empanado",
+        name: "Camarão Empanado (10 un.)",
+        description: "Camarões crocantes, molho tártaro cítrico e limão siciliano.",
+        price: 58.9,
+        image:
+          "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?auto=format&fit=crop&w=800&q=80",
+      },
+    ],
+  },
+  {
+    id: "culinaria-japonesa",
+    label: "Culinária Japonesa",
+    emoji: "🍣",
+    items: [
+      {
+        id: "sushi-combinado",
+        name: "Sushi Combinado Íris",
+        description: "Seleção de sushis e sashimis do dia, com wasabi, gengibre e shoyu.",
+        price: 69.9,
+        image:
+          "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80",
+        badge: "Novo",
+      },
+      {
+        id: "temaki-salmao",
+        name: "Temaki de Salmão",
+        description: "Cone de nori com salmão fresco, cream cheese, cebolinha e gergelim.",
+        price: 34.9,
+        image:
+          "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=800&q=80",
+        badge: "Novo",
+      },
+      {
+        id: "hot-roll",
+        name: "Hot Roll Empanado",
+        description: "Enrolado de salmão e cream cheese, empanado e frito, com molho tarê.",
+        price: 42.9,
+        image:
+          "https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: "guioza",
+        name: "Guioza de Carne (8 un.)",
+        description: "Pastéis japoneses grelhados, recheio de carne e molho ponzu.",
+        price: 36.9,
+        image:
+          "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: "yakisoba",
+        name: "Yakisoba Especial",
+        description: "Macarrão oriental, legumes, carne e frango no molho shoyu da casa.",
+        price: 48.9,
+        image:
+          "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=800&q=80",
+        badge: "Novo",
+      },
     ],
   },
   {
@@ -162,6 +269,15 @@ const menuCategories = [
         image:
           "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=800&q=80",
       },
+      {
+        id: "petit-gateau",
+        name: "Petit Gâteau da Casa",
+        description: "Bolinho de chocolate com centro cremoso e sorvete de creme.",
+        price: 32.9,
+        image:
+          "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=800&q=80",
+        badge: "Novo",
+      },
     ],
   },
   {
@@ -184,6 +300,22 @@ const menuCategories = [
         price: 29.9,
         image:
           "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: "agua-com-gas",
+        name: "Água com Gás",
+        description: "Garrafa 500 ml bem gelada.",
+        price: 8.9,
+        image:
+          "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=800&q=80",
+      },
+      {
+        id: "refrigerante",
+        name: "Refrigerante Lata",
+        description: "Opções clássicas geladas para acompanhar o pedido.",
+        price: 9.9,
+        image:
+          "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=800&q=80",
       },
     ],
   },
@@ -441,6 +573,8 @@ function renderCouponList() {
 
 function setupCouponForm() {
   const form = document.getElementById("couponForm");
+  if (!form) return;
+
   const msg = document.getElementById("couponFormMsg");
   const valid = document.getElementById("couponValid");
   if (valid && !valid.value) {

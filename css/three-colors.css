@@ -222,6 +222,40 @@ body,
   background: #ffb04a !important;
 }
 
+.app-status__brands .app-status__brand {
+  background: #fff3e0 !important;
+}
+
+.app-status__brands .app-status__brand--ifood {
+  border-color: #ea1d2c !important;
+  color: #ea1d2c !important;
+}
+
+.app-status__brands .app-status__brand--ifood .app-status__brand-mark {
+  background: #ea1d2c !important;
+  color: #ffffff !important;
+}
+
+.app-status__brands .app-status__brand--99 {
+  border-color: #ffdd00 !important;
+  color: #1a1a1a !important;
+}
+
+.app-status__brands .app-status__brand--99 .app-status__brand-mark {
+  background: #ffdd00 !important;
+  color: #1a1a1a !important;
+}
+
+.app-status__brands .app-status__brand--uber {
+  border-color: #06c167 !important;
+  color: #06c167 !important;
+}
+
+.app-status__brands .app-status__brand--uber .app-status__brand-mark {
+  background: #06c167 !important;
+  color: #ffffff !important;
+}
+
 .app-status__mode--active,
 .menu__tab--active,
 .btn-primary,
@@ -270,7 +304,7 @@ body,
   background: none !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
-  color: #000000 !important;
+  color: #e85d2a !important;
 }
 
 .hero__glow {
@@ -340,10 +374,13 @@ body,
 .moments > .container > .section-head,
 .moments > .container > .section-head .t-label,
 .moments > .container > .section-head .t-h2,
-.moments > .container > .section-head .t-lead,
-.moments > .container > .section-head .text-gold,
-.moments > .container > .section-head .text-muted-dark {
+.moments > .container > .section-head .text-gold {
   color: #000000 !important;
+}
+
+.moments > .container > .section-head .t-lead,
+.moments > .container > .section-head .text-muted-dark {
+  color: #e85d2a !important;
 }
 
 .moments__caption {
@@ -425,6 +462,26 @@ body,
 
 .field label {
   color: #e85d2a !important;
+}
+
+.coupon-form {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.coupon-form .field label {
+  color: #ffffff !important;
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.coupon-form .field-hint {
+  color: rgba(255, 255, 255, 0.85) !important;
+  background: none !important;
 }
 
 .cart-coupon button,
