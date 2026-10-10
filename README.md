@@ -1,34 +1,15 @@
-# Íris Lua — Restaurante & Delivery
+📌##ÍrisLuaRestaurante 🍽️ - A melhor opção da sua refeição Ltda
 
-Site institucional e cardápio digital do restaurante **Íris Lua**, inspirado na experiência dos apps iFood, 99Food e Uber Eats.
+🌐 ## Site Link do projeto online: https://restaurante-iris-lua.vercel.app/
 
-## Identidade
+📂 ## Repositório: https://github.com//JorgeRamalho/Restaurante-IrisLua
 
-| Elemento | Definição |
-|----------|-----------|
-| **Nome** | Íris Lua |
-| **Slogan** | Sabores sob o luar |
-| **Símbolo** | Crescente lunar + íris dourada |
-| **Gradiente** | `#0A1628` → `#1A3A5C` → `#E8B84A` |
-| **Display** | Cormorant Garamond |
-| **UI / corpo** | Figtree |
+💻 ## Tecnologias
 
-## Abrir com Live Server (recomendado)
+HTML CSS JavaScript React TypeScript Node.js 📲 ## Funcionalidades
 
-1. Abra `index.html` no Cursor/VS Code
-2. Clique com o botão direito → **Open with Live Server**  
-   (ou o botão **Go Live** na barra inferior)
+Fotos e Imagens Vídeos Layout Estilo do Site
 
-Arquivos estáticos: `index.html` · `css/styles.css` · `js/app.js` · `favicon.svg`
+📠 ## Como executar git clone ... npm install npm run dev
 
-## Rodar com Vite (opcional)
-
-```bash
-npm install
-npm run dev
-```
-
-## Stack
-
-- HTML + CSS + JS (Live Server)
-- Versão React/Vite também disponível em `src/`
+💿 ## Autor 📄Seu nome: Jorge R. Barbosa 💼 LinkedIn: https://www.linkedin.com/in/jorge-r-barbosa-aabb0417b/ 👾 GitHub: https://github.com/JorgeRamalho ☎️ Contato: 41 99143-4153
